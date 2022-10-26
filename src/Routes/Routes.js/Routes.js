@@ -9,6 +9,7 @@ import Courses from "../../pages/Courses/Courses";
 import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
+import Checkout from "../../pages/Checkout/Checkout";
 
 export const routes = createBrowserRouter([
     {
@@ -42,6 +43,11 @@ export const routes = createBrowserRouter([
                         path: '/allCourses/courses/:id',
                         element: <Courses></Courses>,
                         loader: ({ params }) => fetch(`https://b610-lerning-platform-server-side-shourovhasan.vercel.app/allCourses/courses/${params.id}`)
+                    },
+                    {
+                        path: '/allCourses/courses/checkout/:id',
+                        element: <Checkout></Checkout>,
+                        loader: ({ params }) => fetch(`https://b610-lerning-platform-server-side-shourovhasan.vercel.app/allCourses/courses/checkout/${params.id}`)
                     },
                     {
                         path: '/allCourses/category/:id',

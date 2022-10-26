@@ -10,6 +10,8 @@ import './Courses.css';
 const Courses = () => {
     const allCourses = useLoaderData();
     const { id, title, course_price, students, teacher, details, image_url, rating, total_view } = allCourses;
+
+    console.log(allCourses);
     return (
         <div>
             <Container>
@@ -25,21 +27,32 @@ const Courses = () => {
 
                     <Card.Body className='course_container'>
                         <Card.Img className='p-0 m-0' variant="top" src={image_url} />
-                        
-                        <Card.Text className='pt-2 text_justify'>
-                            <strong>Description: </strong> {details}
+                        <h5 className='pt-2'>Course Description:</h5> <hr className='m-0 py-1'/>
+                        <Card.Text className='text_justify'>
+                            {details}              
                         </Card.Text>
-                    </Card.Body>
-                    <Card.Footer className="d-flex justify-content-between">
-                        <div className='d-flex align-items-center'>
-                            <FaStar className='text-warning me-1'></FaStar>
-                            <span>{rating?.number}</span>
-                        </div>
                         <div>
-                            <FaEye></FaEye>
-                            <span className='ms-1'>{total_view}</span>
+                            <h5 className='mt-3'>Course Information:</h5> <hr className='m-0 py-1' />
+                            <ul>
+                                <li>
+                                    <strong>Instructor: {teacher?.name}</strong>
+                                </li>
+                                <li>
+                                    <strong>Enrolled Students: {students?.number}</strong>
+                                </li>
+                                <li>
+                                    <strong>Price: {course_price} tk</strong>
+                                </li>
+                                <li>
+                                    <strong>Published: {teacher?.published_date}</strong>
+                                </li>
+                                <li>
+                                    <strong>Rating: {rating?.number}</strong>
+                                </li>
+                            </ul>
                         </div>
-                    </Card.Footer>
+                    </Card.Body>
+                    <Link className='btn btn-primary w-50 mb-2 m-auto display-5' to={`/allCourses/courses/checkout/${id}`}>Get premium access</Link>
                 </Card>
             </Container>
         </div>
