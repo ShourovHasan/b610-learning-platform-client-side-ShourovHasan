@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Container, Image, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Image, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 import { FaSignOutAlt, FaUser } from 'react-icons/fa';
@@ -40,7 +40,7 @@ const Header = () => {
                                     user?.uid ?
                                         <>
                                             <Link className='navbar-brand px-2' to='/' onClick={handleLogOut}><FaSignOutAlt className='pe-1'></FaSignOutAlt> <span>Log Out</span></Link>
-                                            <span>{user?.displayName}</span>
+                                            {/* <span>{user?.displayName}</span> */}
                                         </>
                                         :
                                         <>

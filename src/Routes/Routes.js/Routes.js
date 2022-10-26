@@ -10,6 +10,7 @@ import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
 import Checkout from "../../pages/Checkout/Checkout";
+import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 
 export const routes = createBrowserRouter([
     {
@@ -46,7 +47,7 @@ export const routes = createBrowserRouter([
                     },
                     {
                         path: '/allCourses/courses/checkout/:id',
-                        element: <Checkout></Checkout>,
+                        element: <PrivateRoutes><Checkout></Checkout></PrivateRoutes>,
                         loader: ({ params }) => fetch(`https://b610-lerning-platform-server-side-shourovhasan.vercel.app/allCourses/courses/checkout/${params.id}`)
                     },
                     {
