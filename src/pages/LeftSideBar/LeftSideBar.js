@@ -14,7 +14,14 @@ const LeftSideBar = () => {
     return (
         <div>
             <h4 className='text-center mb-4'>Courses Departments</h4>
-            
+            <div className='department_container rounded'>
+                {
+                    categories.map(category =>
+                        <p key={category.id} className='px-2 py-1 rounded'>
+                            <NavLink className={`navbar-brand ({ isActive }) => isActive ? ' ' : undefined`} to={`/allCourses/category/${category.id}`}>{category.name}</NavLink>
+                        </p>)
+                }
+            </div>
         </div>
     );
 };
