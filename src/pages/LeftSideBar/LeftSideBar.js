@@ -13,7 +13,7 @@ const LeftSideBar = () => {
     }, [])
     return (
         <div>
-            <h4 className='text-center mb-4'>Courses Departments</h4>
+            <h4 className='text-center mb-4'>Course Departments</h4>
             <div className='department_container rounded'>
                 {
                     categories.map(category =>

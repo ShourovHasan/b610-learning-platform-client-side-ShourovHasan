@@ -2,3 +2,13 @@
     text-align: justify;
     text-justify: inter-word;
 }
+.course_align:hover{
+    border-radius: 15px;
+    box-shadow: -1px -1px 10px -1px black;
+}
+.course_align img{
+    height: 250px;
+    width: 100%;
+    margin: auto;
+    object-fit: cover;
+}
