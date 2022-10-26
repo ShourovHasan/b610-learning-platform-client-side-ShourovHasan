@@ -13,7 +13,7 @@ const Courses = () => {
 
     console.log(allCourses);
     return (
-        <div>
+        <div className='my-4'>
             <Container>
                 <Card className="m-2 card_container">
                     <Card.Header className='d-flex justify-content-between align-items-center bg-white'>
