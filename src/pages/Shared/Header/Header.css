@@ -1,0 +1,6 @@
+.active{
+    background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity));
+    border-radius: 8px;
+    color: white !important;
+    
+}

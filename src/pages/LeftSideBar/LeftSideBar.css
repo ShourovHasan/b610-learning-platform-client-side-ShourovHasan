@@ -1,0 +1,9 @@
+.department_container{
+    background-color: #c1c1c1;
+    padding: 20px;
+    box-shadow: 1px 1px 10px 1px black;
+}
+.department_container p:hover{
+    background-color: #0d6efd;
+    color: white;
+}
