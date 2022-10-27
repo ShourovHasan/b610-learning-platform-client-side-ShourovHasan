@@ -8,13 +8,11 @@
 .profile_container {
     position: relative;
 }
-
 .image {
     display: block;
     width: 100%;
     height: auto;
 }
-
 .overlay {
     position: absolute;
     bottom: 0;
@@ -28,62 +26,44 @@
     -webkit-transition: .2s ease;
     transition: .2s ease;
 }
-
 .profile_container:hover .overlay {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
 }
-
 .text {
     color: white;
     font-size: 22px;
-    background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+    background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity));
     padding: 5px 10px;
     border-radius: 10px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: -259%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
 }
-
 /* for dark and light mode  */
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
-
 #root {
     height: 100%;
 }
-
 html,
 body {
     min-height: 100vh;
     height: 100%;
-
 }
-
-span {
-    /* font-size: 40px */
-}
-
 .dark-mode {
-    /* background-color: #1a1919;
-    color: var(--bs-navbar-brand-color); */
-    /* color: white !important; */
-    /* height: 100%; */
     transition: background-color 0.25s ease-in-out;
 }
 
 .light-mode {
-    /* background-color: #F8F9FA; */
-    /* color: #333; */
-    /* height: 100%; */
     transition: background-color 0.25s ease-in-out;
 }
 

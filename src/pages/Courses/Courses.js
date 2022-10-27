@@ -5,6 +5,9 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import { FaRegFilePdf } from "react-icons/fa";
 import './Courses.css';
+import Pdf from "react-to-pdf";
+
+const ref = React.createRef();
 
 const Courses = () => {
     const allCourses = useLoaderData();
@@ -13,19 +16,21 @@ const Courses = () => {
     console.log(allCourses);
     return (
         <div className='my-4'>
-            <Container>
+            <Container ref={ref}>
                 <Card className="m-2 card_container">
                     <Card.Header className='d-flex justify-content-between align-items-center bg-white'>
                         <div className='d-flex'>
                             <Card.Title className='text-center mt-2'>{title}</Card.Title>
                         </div>
                         <div>
-                            <FaRegFilePdf className='display-6 text-danger'></FaRegFilePdf>
+                            <Pdf targetRef={ref} filename={`${title}.pdf`}>
+                                {({ toPdf }) => <FaRegFilePdf onClick={toPdf} className='display-6 text-danger'></FaRegFilePdf>}
+                            </Pdf>
                         </div>
                     </Card.Header>
 
                     <Card.Body className='course_container'>
-                        <Card.Img className='p-0 m-0' variant="top" src={image_url} />
+                        <Card.Img className='p-0 m-0' variant="top" src={image_url} />                      
                         <h5 className='pt-2'>Course Description:</h5> <hr className='m-0 py-1' />
                         <Card.Text className='text_justify'>
                             {details}
@@ -57,5 +62,6 @@ const Courses = () => {
         </div>
     );
 };
-
+// const rootElement = document.getElementById("root");
+// ReactDOM.render(<Courses />, rootElement);
 export default Courses;

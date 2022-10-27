@@ -52,8 +52,8 @@ const Header = () => {
                                 {
                                     user?.uid ?
                                         <>
-                                            <Link className='navbar-brand px-2' to='/' onClick={handleLogOut}><FaSignOutAlt className='h3'></FaSignOutAlt></Link>
-                                            {/* <span>Log Out</span> */}
+                                            <Link className='navbar-brand px-2' to='/' onClick={handleLogOut}><FaSignOutAlt className='h4 me-1'></FaSignOutAlt><span>Logout</span></Link>
+                                            
                                         </>
                                         :
                                         <>
