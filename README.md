@@ -1,70 +1,11 @@
-# Getting Started with Create React App
+* Project Name: AIUB Portal
+* Live website link: https://aiub-learning-platform.web.app
+* About our website: The AIUB Portal website is primarily designed as an online course platform where students can purchase and learn courses of their choice. And some important questions can be answered from FAQ page and Blog page. Some of the works of this project are discussed below:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. In this website I have shown some courses of AIUB department wise. Where, all the course teachers, prices, how many students have taken the course, when it was published, and how many students have given this course are shown.
+2. After showing the details of all the courses, there is a premium access button, which will not allow the user to go to the checkout page without logging in.
+After login, you will be taken to the checkout page. If the checkout page is reloaded, the user stays on the checkout page.
+3. An FAQ page has been provided, where some of the important questions and answers to questions related to this course and ReactJS have been discussed. Similarly, the blog page is also discussed, which has been used for this project.
+4. It will be possible to register with full name, image url and email, password on the registration page. And in addition to login with email and password on the login page, it will also be possible to login with Google and GitHub.
+5. After login, the user's profile picture will also be displayed in the heading and logout option will also be displayed. Logout can also be done through Logout. And when he goes to the checkout page, he can go to the checkout page without logging in, arrangements have also been made.
+6. This project works with some important hooks, libraries and frameworks. These include useState, useEffect, createContext, useContext, getAuth, signIn and SignOut, and use the Bootstrap Framework.

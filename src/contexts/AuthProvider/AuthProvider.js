@@ -9,9 +9,7 @@ const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-
     // console.log(user);
-
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
 
@@ -47,11 +45,6 @@ const AuthProvider = ({children}) => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setLoading(false);
             setUser(currentUser);
-            // if (currentUser === null || currentUser.emailVerified) {
-            // }
-            // else {
-            //     setUser(null);
-            // }
         })
         return () => {
             unsubscribe();
