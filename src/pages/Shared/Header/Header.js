@@ -40,8 +40,7 @@ const Header = () => {
                                 {
                                     user?.uid ?
                                         <>
-                                            <Link className='navbar-brand px-2' to='/' onClick={handleLogOut}><FaSignOutAlt className='pe-1'></FaSignOutAlt> <span>Log Out</span></Link>
-                                            {/* <span>{user?.displayName}</span> */}
+                                            <Link className='navbar-brand px-2' to='/' onClick={handleLogOut}><FaSignOutAlt className='pe-1'></FaSignOutAlt> <span>Log Out</span></Link>                                            
                                         </>
                                         :
                                         <>
@@ -50,22 +49,21 @@ const Header = () => {
                                         </>
                                 }
                             </>
-                            <Link>
+                            {/* for profile picture hover and show user name  */}
+                            <Link className='navbar-brand profile_container'>
                                 {
                                     user?.photoURL ?
-                                        <>
-                                            <Image className={`ms-2 {Image:hover? ${user?.name} : undefined}`} roundedCircle style={{ height: '32px' }} src={user?.photoURL} alt="" />
-
+                                        <>                                           
+                                            <div class="overlay">
+                                                <div class="text">{user?.displayName}</div>
+                                            </div>
+                                            <Image className='image' roundedCircle style={{ height: '32px' }} src={user?.photoURL} alt="" />                                       
                                         </>
                                         :
                                         <></>
-
                                 }
                             </Link>
-                        </Nav>
-                        <div className='d-lg-none'>
-
-                        </div>
+                        </Nav>                        
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

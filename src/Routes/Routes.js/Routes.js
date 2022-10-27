@@ -36,17 +36,13 @@ export const routes = createBrowserRouter([
                         path: '/allCourses',
                         element: <AllCourses></AllCourses>,
                         loader: () => fetch('https://b610-lerning-platform-server-side-shourovhasan.vercel.app/allCourses/courses')
-                    },                    
-                    // {
-                    //     path: '/allCourses/courses',
-                    //     element: <Courses></Courses>,
-                    //     loader: () => fetch('https://b610-lerning-platform-server-side-shourovhasan.vercel.app/allCourses/courses')
-                    // },                    
+                    },                     
                     {
                         path: '/allCourses/courses/:id',
                         element: <Courses></Courses>,
                         loader: ({ params }) => fetch(`https://b610-lerning-platform-server-side-shourovhasan.vercel.app/allCourses/courses/${params.id}`)
                     },
+                    // Private Route Checkout Page 
                     {
                         path: '/allCourses/courses/checkout/:id',
                         element: <PrivateRoutes><Checkout></Checkout></PrivateRoutes>,
