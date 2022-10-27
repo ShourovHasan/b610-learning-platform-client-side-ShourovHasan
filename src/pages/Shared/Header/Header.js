@@ -35,6 +35,7 @@ const Header = () => {
                             <NavLink to='/allCourses' className='navbar-brand px-2'>Courses </NavLink>
                             <NavLink to='/faq' className='navbar-brand px-2'>FAQ</NavLink>
                             <NavLink to='/blog' className='navbar-brand px-2'>Blog</NavLink>
+                            <Link className='navbar-brand'>Dark/Light</Link>
                             <>
                                 {
                                     user?.uid ?
@@ -53,11 +54,11 @@ const Header = () => {
                                 {
                                     user?.photoURL ?
                                         <>
-                                            <Image className='ms-2' roundedCircle style={{ height: '32px' }} src={user?.photoURL} alt="" />
+                                            <Image className={`ms-2 {Image:hover? ${user?.name} : undefined}`} roundedCircle style={{ height: '32px' }} src={user?.photoURL} alt="" />
 
                                         </>
                                         :
-                                        <FaUser></FaUser>
+                                        <></>
 
                                 }
                             </Link>

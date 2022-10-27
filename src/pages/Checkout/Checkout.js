@@ -7,7 +7,7 @@ const Checkout = () => {
     console.log(courseCheckout);
     return (
         <div>
-            <h2>{courseCheckout.title} </h2>
+            <h2 className='text-center'>{courseCheckout.title} </h2>
         </div>
     );
 };

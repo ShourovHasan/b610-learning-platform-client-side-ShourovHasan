@@ -4,8 +4,9 @@ import './Blog.css';
 
 const Blog = () => {
     return (
-        <div className='w-75 m-auto pt-5'>
+        <div className='w-75 m-auto'>
             <Accordion className='blog_container'>
+                <h3 className='text-center'>Some Important Blogs</h3>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>what is cors?</Accordion.Header>
                     <Accordion.Body>

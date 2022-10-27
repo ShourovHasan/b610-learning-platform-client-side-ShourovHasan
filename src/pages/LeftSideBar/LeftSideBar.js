@@ -12,9 +12,9 @@ const LeftSideBar = () => {
             .catch(error => console.error(error))
     }, [])
     return (
-        <div>
+        <div className='mb-5 pb-5'>
             <h4 className='text-center mb-4'>Course Departments</h4>
-            <div className='department_container rounded'>
+            <div className='department_container rounded mb-5'>
                 {
                     categories.map(category =>
                         <p key={category.id} className='px-2 py-1 rounded'>

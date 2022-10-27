@@ -64,12 +64,12 @@ const Register = () => {
         <div>
             <Form onSubmit={handleSubmit} className='w-75 m-auto'>
                 <h2 className='text-center'>Register</h2>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Full Name</Form.Label>
                     <Form.Control type="text" name='name' placeholder="Your Full Name" />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" controlId="formBasicText">
                     <Form.Label>Photo URL</Form.Label>
                     <Form.Control type="text" name='photoURL' placeholder="Photo URL" />
                 </Form.Group>
@@ -95,6 +95,9 @@ const Register = () => {
                 <Form.Text className="text-danger">
                     {error}
                 </Form.Text>
+                <div className='account_container'>
+                    <p><small>Already have an account? <Link to='/login'>Login</Link></small></p>
+                </div>
             </Form>
         </div>
     );
