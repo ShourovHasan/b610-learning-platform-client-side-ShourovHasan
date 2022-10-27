@@ -45,7 +45,7 @@ const Courses = () => {
                                     <strong>Enrolled Students: {students?.number}</strong>
                                 </li>
                                 <li>
-                                    <strong>Price: {course_price} tk</strong>
+                                    <strong>Price: ${course_price}</strong>
                                 </li>
                                 <li>
                                     <strong>Published: {teacher?.published_date}</strong>

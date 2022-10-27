@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { Button, ButtonGroup } from 'react-bootstrap';
-import toast from 'react-hot-toast';
 import Form from 'react-bootstrap/Form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
@@ -8,8 +7,9 @@ import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
     const [error, setError] = useState('');
+    const [userEmail, setUserEmail] = useState('');
 
-    const { signIn, setLoading, googleProviderLogin, githubProviderLogin } = useContext(AuthContext);
+    const { signIn, googleProviderLogin, githubProviderLogin, sendResetEmail } = useContext(AuthContext);
     
     let location = useLocation();
     const navigate = useNavigate();
@@ -32,12 +32,8 @@ const Login = () => {
                 navigate(from, { replace: true });                
             })
             .catch(error => {
-                // console.error(error);
                 setError(error.message);
             })
-            // .finally(() => {
-            //     setLoading(false);
-            // })
     }
     const handleGoogleSignIn = () => {
         googleProviderLogin()
@@ -63,13 +59,32 @@ const Login = () => {
             })
     }
 
+    const handleEmailBlur = (event) => {
+        const email = event.target.value;
+        setUserEmail(email);
+    }
+
+    const handleSendResetEmail = () => {
+        if (!userEmail) {
+            alert('Please enter your email address');
+            return;
+        }
+        sendResetEmail(userEmail)
+            .then(() => { 
+                alert('Password Reset Email sent. Please Check your email.')
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+    }
+
     return (
         <div className='mb-5 pb-4'>
             <Form onSubmit={handleSubmit} className='w-75 m-auto'>
                 <h2 className='text-center'>Login</h2>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' placeholder="Enter email" />
+                    <Form.Control onBlur={handleEmailBlur} type="email" name='email' placeholder="Enter email" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
@@ -82,7 +97,10 @@ const Login = () => {
                     {error}
                 </Form.Text>
                 <div className='account_container'>
-                    <p><small>New to AIUB Portal? <Link to='/register'>Create New Account</Link></small></p>
+                    <p className='m-0 p-0'><small>New to AIUB Portal? <Link to='/register'>Create New Account</Link></small></p>
+                    <p className='m-0 p-0'>
+                        <small className='d-flex align-items-center'>Forget Password?<Button onClick={handleSendResetEmail} variant="link">Reset Password</Button></small>
+                    </p>
                 </div>
                 <ButtonGroup vertical className='w-100 mt-3'>
                     <Button onClick={handleGoogleSignIn} variant="outline-primary mb-2"><FaGoogle></FaGoogle> Login with Google</Button>
