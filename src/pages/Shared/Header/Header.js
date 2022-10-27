@@ -6,8 +6,7 @@ import { FaSignOutAlt, FaUser } from 'react-icons/fa';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
-    const { user, logOut } = useContext(AuthContext);
-    const [darkMode, setDarkMode] = useState(false);
+    const { user, logOut, setDarkMode, darkMode } = useContext(AuthContext);    
 
     // console.log(user.photoURL);
     const handleLogOut = () => {
@@ -21,7 +20,7 @@ const Header = () => {
     }
     return (
         <div>
-            <Navbar collapseOnSelect className='mb-4 bg-light' expand="lg"  variant="light">
+            <Navbar collapseOnSelect className='mb-4 bg-light'  expand="lg"  variant="light">
                 <Container>
                     <Navbar.Brand className='d-flex align-items-center'>
                         <Link to='/' className='me-2'><Image className='ms-2' roundedCircle style={{ height: '45px' }} src='aiub_portal_logo.png' alt="" /></Link>

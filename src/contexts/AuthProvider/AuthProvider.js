@@ -8,6 +8,7 @@ const auth = getAuth(app);
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [darkMode, setDarkMode] = useState(false);
 
     // console.log(user);
     const googleProvider = new GoogleAuthProvider();
@@ -60,7 +61,7 @@ const AuthProvider = ({children}) => {
         return signOut(auth);
     }
 
-    const authInfo = { user, setUser, googleProviderLogin, githubProviderLogin, logOut, createUser, signIn, loading, updateUserProfile, verifyEmail, setLoading, sendResetEmail };
+    const authInfo = { user, setUser, googleProviderLogin, githubProviderLogin, logOut, createUser, signIn, loading, updateUserProfile, verifyEmail, setLoading, sendResetEmail, setDarkMode, darkMode  };
     
     return (
         <AuthContext.Provider value={authInfo}>

@@ -11,6 +11,8 @@ const Profile = () => {
     const photoURLRef = useRef(user?.photoURL);
     const navigate = useNavigate();
 
+    // console.log(user);
+
     const handleNameChange = (event) => {
         setName(event.target.value);
     }
@@ -32,9 +34,9 @@ const Profile = () => {
         console.log(profile);
         updateUserProfile(profile)
             .then(() => { })
-            .catch(error => {
-                setError(error.message);
-                toast.error({ error });
+            .catch(e => {
+                setError(e.message);
+                toast.error(error);
             })
     }
     return (
