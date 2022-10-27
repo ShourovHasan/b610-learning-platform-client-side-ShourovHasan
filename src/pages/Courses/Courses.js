@@ -13,7 +13,7 @@ const Courses = () => {
     const allCourses = useLoaderData();
     const { id, title, course_price, students, teacher, details, image_url, rating } = allCourses;
 
-    console.log(allCourses);
+    // console.log(allCourses);
     return (
         <div className='my-4'>
             <Container ref={ref}>

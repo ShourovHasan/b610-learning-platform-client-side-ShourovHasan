@@ -63,12 +63,12 @@ const Header = () => {
                                 }
                             </>
                             {/* for profile picture hover and show user name  */}
-                            <Link className='navbar-brand profile_container'>
+                            <Link to='/profile' className='navbar-brand profile_container'>
                                 {
                                     user?.photoURL ?
                                         <>
-                                            <div class="overlay">
-                                                <div class="text">{user?.displayName}</div>
+                                            <div className="overlay">
+                                                <div className="text">{user?.displayName}</div>
                                             </div>
                                             <Image className='image' roundedCircle style={{ height: '32px' }} src={user?.photoURL} alt="" />
                                         </>

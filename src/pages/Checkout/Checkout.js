@@ -8,7 +8,7 @@ const Checkout = () => {
     const courseCheckout = useLoaderData();
     const { id, title, course_price } = courseCheckout;
     
-    console.log(courseCheckout);
+    // console.log(courseCheckout);
 
     const handleConfirmCheckout = () => {
         toast.success('Congratulations!!! You Successfully Enrolled Our Course.');

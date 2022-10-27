@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
+import toast from 'react-hot-toast';
 
 const Login = () => {
     const [error, setError] = useState('');
@@ -21,12 +22,12 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        // console.log(email, password);
 
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                // console.log(user);
                 form.reset();
                 setError('');
                 navigate(from, { replace: true });                
@@ -39,7 +40,7 @@ const Login = () => {
         googleProviderLogin()
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                // console.log(user);
                 navigate(from, { replace: true }); 
             })
             .catch(error => {
@@ -51,7 +52,7 @@ const Login = () => {
         githubProviderLogin()
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                // console.log(user);
                 navigate(from, { replace: true }); 
             })
             .catch(error => {
@@ -71,7 +72,7 @@ const Login = () => {
         }
         sendResetEmail(userEmail)
             .then(() => { 
-                alert('Password Reset Email sent. Please Check your email.')
+                toast.success("Don't worry if the email goes to the spam folder.");
             })
             .catch(error => {
                 setError(error.message);

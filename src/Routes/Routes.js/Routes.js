@@ -13,6 +13,7 @@ import Checkout from "../../pages/Checkout/Checkout";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 import TermsAndConditions from "../../Others/TermsAndConditions";
 import PageNotFound from "../../pages/PageNotFound/PageNotFound";
+import Profile from "../../pages/Profile/Profile";
 
 export const routes = createBrowserRouter([
     {
@@ -74,6 +75,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/terms',
                 element: <TermsAndConditions></TermsAndConditions>
+            },
+            {
+                path: '/profile',
+                element: <PrivateRoutes><Profile></Profile></PrivateRoutes>
             },
         ]
     },

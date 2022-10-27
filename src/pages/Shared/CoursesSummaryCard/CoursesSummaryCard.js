@@ -8,13 +8,13 @@ import { Button } from 'react-bootstrap';
 
 const CoursesSummaryCard = ({ courses }) => {
     const { id, title, image_url, course_price, rating } = courses;
-    console.log(courses)
+    // console.log(courses);
     return (
         <div className='m-3'>
             <Card style={{ width: '18rem' }} className='w-100 course_align'>
-                <Card.Img variant="top" src={image_url}/>
+                <Card.Img variant="top" src={image_url} />
                 <Card.Body>
-                    <Card.Title style={{ height: '57px' }} className='text-center'>{title}</Card.Title> 
+                    <Card.Title style={{ height: '57px' }} className='text-center'>{title}</Card.Title>
                     <div className='d-flex justify-content-between'>
                         <p>Price: ${course_price}</p>
                         <p><FaStar className='text-warning'></FaStar> {rating?.number}</p>
