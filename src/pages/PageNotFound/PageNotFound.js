@@ -5,7 +5,7 @@ import './PageNotFound.css';
 const PageNotFound = () => {
     return (
         <div className='pageNotFound'>
-            
+            <Image src='404.jpg'></Image>
         </div>
     );
 };
