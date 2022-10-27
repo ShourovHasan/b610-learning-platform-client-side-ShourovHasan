@@ -9,8 +9,8 @@ function App() {
   const { setDarkMode, darkMode } = useContext(AuthContext);
 
   return (
-    // <div className={`${darkMode ? "dark-mode" : "light-mode"}`}>
-    <div className="">
+    <div className={`${darkMode ? "dark-mode" : "light-mode"}`}>
+    {/* // <div className=""> */}
       <RouterProvider router={routes}></RouterProvider>
       <Toaster></Toaster>
     </div>

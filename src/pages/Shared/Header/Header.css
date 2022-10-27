@@ -64,14 +64,25 @@ body {
 }
 
 .dark-mode {
-    background-color: #1a1919;
-    /* color: #ffffff !important; */
+    background-color: #1e2b4774;
+    color: #E09302;
     transition: background-color 0.25s ease-in-out;
 }
 
 .light-mode {
-    background-color: rgba(227, 227, 227, 0.505);
-    /* color: #333; */
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.25s ease-in-out;
+}
+.nav-dark-mode {
+    background-color: #1e2b4748;
+    color: #e89a0a;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.nav-light-mode {
+    background-color: #ffffff;
+    color: #000000;
     transition: background-color 0.25s ease-in-out;
 }
 

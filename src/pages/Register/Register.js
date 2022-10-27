@@ -61,7 +61,7 @@ const Register = () => {
     }
 
     return (
-        <div>
+        <div className='mb-5 pb-3 border rounded-5'>
             <Form onSubmit={handleSubmit} className='w-75 m-auto'>
                 <h2 className='text-center'>Register</h2>
                 <Form.Group className="mb-3" controlId="formBasicName">
