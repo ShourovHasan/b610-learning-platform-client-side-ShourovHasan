@@ -1,12 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Container, Image, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
-import { FaSignOutAlt, FaUser } from 'react-icons/fa';
+import { FaSignOutAlt } from 'react-icons/fa';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
-    const { user, logOut, setDarkMode, darkMode } = useContext(AuthContext);    
+    const { user, logOut } = useContext(AuthContext);    
 
     // console.log(user.photoURL);
     const handleLogOut = () => {
@@ -36,17 +36,6 @@ const Header = () => {
                             <NavLink to='/allCourses' className='navbar-brand px-2'>Courses </NavLink>
                             <NavLink to='/faq' className='navbar-brand px-2'>FAQ</NavLink>
                             <NavLink to='/blog' className='navbar-brand px-2'>Blog</NavLink>
-                            {/* <Link className='navbar-brand'>Dark/Light</Link> */}
-                            <div className=''>
-                                <div className="mode_container">
-                                    <div className="switch-checkbox">
-                                        <label className="switch">
-                                            <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
-                                            <span className="slider round"> </span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
                             <>
                                 {
                                     user?.uid ?

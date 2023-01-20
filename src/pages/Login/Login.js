@@ -26,7 +26,7 @@ const Login = () => {
 
         signIn(email, password)
             .then(result => {
-                const user = result.user;
+                // const user = result.user;
                 // console.log(user);
                 form.reset();
                 setError('');
@@ -39,7 +39,7 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         googleProviderLogin()
             .then(result => {
-                const user = result.user;
+                // const user = result.user;
                 // console.log(user);
                 navigate(from, { replace: true }); 
             })
@@ -51,7 +51,7 @@ const Login = () => {
     const handleGithubLogIn = () => {
         githubProviderLogin()
             .then(result => {
-                const user = result.user;
+                // const user = result.user;
                 // console.log(user);
                 navigate(from, { replace: true }); 
             })
@@ -80,9 +80,9 @@ const Login = () => {
     }
 
     return (
-        <div className='mb-5 pb-4 border rounded-5 w-75 mx-auto  shadow-lg'>
+        <div className='mb-5 pb-4 border rounded-5 w-75 mx-auto  shadow-lg '>
             <Form onSubmit={handleSubmit} className='mb-5 pb-4 w-75 m-auto'>
-                <h2 className='text-center'>Login</h2>
+                <h2 className='text-center mt-3'>Login</h2>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control onBlur={handleEmailBlur} type="email" name='email' placeholder="Enter email" />

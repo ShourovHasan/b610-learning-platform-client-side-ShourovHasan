@@ -27,7 +27,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/home',
                 element: <Home></Home>
-            },            
+            },
             {
                 path: '/allCourses',
                 element: <CoursesLayout></CoursesLayout>,
@@ -36,7 +36,7 @@ export const routes = createBrowserRouter([
                         path: '/allCourses',
                         element: <AllCourses></AllCourses>,
                         loader: () => fetch('https://b610-lerning-platform-server-side-shourovhasan.vercel.app/allCourses/courses')
-                    },                     
+                    },
                     {
                         path: '/allCourses/courses/:id',
                         element: <Courses></Courses>,
@@ -54,7 +54,7 @@ export const routes = createBrowserRouter([
                         loader: ({ params }) => fetch(`https://b610-lerning-platform-server-side-shourovhasan.vercel.app/allCourses/category/${params.id}`)
                     },
                 ]
-            },            
+            },
             {
                 path: '/faq',
                 element: <FAQ></FAQ>
